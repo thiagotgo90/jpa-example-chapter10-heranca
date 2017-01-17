@@ -25,3 +25,13 @@ Herança
 		Se essa anotação não seja usada:
 			caso o tipo da coluna seja String, será usado no nome da entidade (pode ser diferente do nome da classe).
 			caso o tipo do campo seja inteiro, será gerado um valor. 
+	
+
+	JOINED
+
+		Sera criado uma tabela para cada Entidade concreta na arvore de herança;
+		Não serão criadas tabelas para mappedSuperClass, mesmo que concretas.
+		Cada tabela criada tera os campos definidos na entidade e caso na arvore de herança haja alguma classe abstrata
+			(seja essa uma entidade ou mappedSuperClass), seus campos pertencerão a primeira entidade concreta filha.
+		A entidade mãe (nesse exemplo, Employee) terá chave primaria e a coluna descriminatoria (@DiscriminatorColunm)
+		Todas as tabelas das entidades concretas filhas terão seus campos e um id que será usado como chave estrategia apontando para a entidade mãe
