@@ -36,9 +36,6 @@ public class Main {
 		entityManager.persist(contractEmployee);
 
 
-
-
-
 		entityManager.getTransaction().commit();
 
 		entityManager.close();
