@@ -19,20 +19,20 @@ public class Main {
 		entityManager.getTransaction().begin();
 
 		FullTimeEmployee fullTime = new FullTimeEmployee();
-		fullTime.setEmployee("employee");
-		fullTime.setCompanyEmployee("company Employee");
-		fullTime.setFullTimeEmployee("full time");
+		fullTime.setEmployee("fullTime - employee");
+		fullTime.setCompanyEmployee("fullTime - company Employee");
+		fullTime.setFullTimeEmployee("fullTime - full time");
 		entityManager.persist(fullTime);
 
 		PartTimeEmployee partTime = new PartTimeEmployee();
-		partTime.setEmployee("employee");
-		partTime.setCompanyEmployee("company Employee");
-		partTime.setPartTimeEmployee("part time");
+		partTime.setEmployee("partTime - employee");
+		partTime.setCompanyEmployee("partTime - company Employee");
+		partTime.setPartTimeEmployee("partTime -part time");
 		entityManager.persist(partTime);
 
 		ContractEmployee contractEmployee = new ContractEmployee();
-		contractEmployee.setEmployee("employee");
-		contractEmployee.setContractEmployee("contract Employee");
+		contractEmployee.setEmployee("contractEmployee - employee");
+		contractEmployee.setContractEmployee("contractEmployee - contract Employee");
 		entityManager.persist(contractEmployee);
 
 
