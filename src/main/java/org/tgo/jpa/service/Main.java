@@ -4,6 +4,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
+import org.tgo.jpa.model.ContractEmployee;
 import org.tgo.jpa.model.FullTimeEmployee;
 import org.tgo.jpa.model.PartTimeEmployee;
 
@@ -18,18 +19,25 @@ public class Main {
 		entityManager.getTransaction().begin();
 
 		FullTimeEmployee fullTime = new FullTimeEmployee();
-		fullTime.setEmployee("campo employee");
+		fullTime.setEmployee("employee");
 		fullTime.setCompanyEmployee("company Employee");
 		fullTime.setFullTimeEmployee("full time");
+		entityManager.persist(fullTime);
 
 		PartTimeEmployee partTime = new PartTimeEmployee();
-		partTime.setEmployee("campo employee");
+		partTime.setEmployee("employee");
 		partTime.setCompanyEmployee("company Employee");
 		partTime.setPartTimeEmployee("part time");
-
-
-		entityManager.persist(fullTime);
 		entityManager.persist(partTime);
+
+		ContractEmployee contractEmployee = new ContractEmployee();
+		contractEmployee.setEmployee("employee");
+		contractEmployee.setContractEmployee("contract Employee");
+		entityManager.persist(contractEmployee);
+
+
+
+
 
 		entityManager.getTransaction().commit();
 
