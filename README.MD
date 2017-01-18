@@ -35,3 +35,11 @@ Herança
 			(seja essa uma entidade ou mappedSuperClass), seus campos pertencerão a primeira entidade concreta filha.
 		A entidade mãe (nesse exemplo, Employee) terá chave primaria e a coluna descriminatoria (@DiscriminatorColunm)
 		Todas as tabelas das entidades concretas filhas terão seus campos e um id que será usado como chave estrategia apontando para a entidade mãe
+
+	TABLE PER CLASS
+
+		Encare como "Tabela por classe concreta". Será criado uma tabela para cada Entidade concreta que existir na arvore de herança.
+		Para mappedSuperClass, nunca será criado (mesmo que concretas)
+		Todas as tabelas criadas terão seus campos e de seus "pais"
+		Não usa chave estrategia ou coluna de tipo porque cada tabela são auto contidas.
+		
