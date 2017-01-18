@@ -13,7 +13,7 @@ import javax.persistence.PrePersist;
 import org.tgo.jpa.listener.EmployeeAuditListener;
 
 @Entity
-@Inheritance(strategy = InheritanceType.JOINED)
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 @DiscriminatorColumn(discriminatorType = DiscriminatorType.STRING, name = "EMPLOYEE_TYPE")
 @EntityListeners(EmployeeAuditListener.class)
 public abstract class Employee {
